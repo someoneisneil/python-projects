@@ -1,0 +1,42 @@
+import time
+
+def loading(redo):
+    for i in range (redo):
+        spacer()
+        print("loading.")
+        time.sleep(0.5)
+        spacer()
+        print("loading..")
+        time.sleep(0.5)
+        spacer()
+        print("loading...")
+        time.sleep(0.5)
+
+
+def spacer():
+    for i in range(100):
+        print("\n")
+
+loading(10)
+
+print('Hello World')
+
+spacer()
+
+def ask():
+    global dg
+    dg = input("hello how was your day plz answer as good or bad\n:)")
+
+ask()
+
+if dg == "good":
+    print ("yay so is mine")
+elif dg == "bad":
+    print("hope it gets better")
+else:
+    print("i dont understand that answer")
+    ask()
+
+
+
+
