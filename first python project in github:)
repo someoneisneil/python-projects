@@ -1,5 +1,25 @@
 import time
 
+def name_check():
+    if name == "Vinnet":
+        print("hello Vinnet sir :)")
+        time.sleep(5)
+    elif name == "neil":
+        print("hello dev :)")
+        time.sleep(5)
+    elif name == "vivek":
+        print("hello daddy :)")
+        time.sleep(5)
+    elif name == "aarnav":
+        print("hello veergi :)")
+        time.sleep(5)
+    elif name == "jaspreet":
+        print("hello mommy :)")
+        time.sleep(5)
+    else :
+        print("hello "+name)
+        time.sleep(1)
+
 def loading(redo):
     for i in range (redo):
         spacer()
@@ -17,9 +37,15 @@ def spacer():
     for i in range(100):
         print("\n")
 
-loading(10)
+loading(3)
 
 print('Hello World')
+
+spacer()
+
+name=input("hello what is your name\n:)")
+
+name_check()
 
 spacer()
 
@@ -40,4 +66,5 @@ def askcheck():
 
 
 ask()
+
 
