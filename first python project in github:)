@@ -26,17 +26,18 @@ spacer()
 def ask():
     global dg
     dg = input("hello how was your day plz answer as good or bad\n:)")
+    askcheck()
+
+
+def askcheck():
+    if dg == "good":
+        print ("yay so is mine")
+    elif dg == "bad":
+      print("hope it gets better")
+    else:
+        print("i dont understand that answer")
+        ask()
+
 
 ask()
-
-if dg == "good":
-    print ("yay so is mine")
-elif dg == "bad":
-    print("hope it gets better")
-else:
-    print("i dont understand that answer")
-    ask()
-
-
-
 
