@@ -57,9 +57,9 @@ def ask():
 
 def askcheck():
     if dg == "good":
-        print ("yay so is mine")
+        print ("yay so is mine",end = ":)")
     elif dg == "bad":
-      print("hope it gets better")
+      print("hope it gets better",end = ":(" )
     else:
         print("i dont understand that answer")
         ask()
