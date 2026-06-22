@@ -16,6 +16,9 @@ def name_check():
     elif name == "jaspreet":
         print("hello mommy :)")
         time.sleep(5)
+    elif name == "beant":
+        print("hello nanogi :)")
+        time.sleep(5)
     else :
         print("hello "+name)
         time.sleep(1)
