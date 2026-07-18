@@ -1,4 +1,4 @@
-# Initial Intro
+
 
 print("So you want to meet the Prof ???")
 print("I am his assistant")
@@ -7,14 +7,11 @@ print();
 
 
 
-#answer = input("Tell a word\n")
-#print(answer, 'apple', sep='')
-#print(answer.strip(), 'apple', sep='')
 
 
 answer = input("ok, tell me what action words are called in English?\n")
 
-# Notice the use of lower()
+
 
 if answer.lower() == "verbs":
     print("Correct, but that was only a warm up ...")
@@ -47,7 +44,6 @@ else:
 
 print()
 sentence = input("ok, tell me a sentence ending in 'wise assistant' (no question please)\n")
-# print(sentence.endswith('wise assistant.'))
 if sentence.endswith('wise assistant'):
     print("Haven't you learnt about punctuations?")
 elif sentence.endswith('wise assistant.'):
