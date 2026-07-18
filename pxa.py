@@ -3,7 +3,6 @@ import turtle
 t = turtle.Turtle()
 ts = t.getscreen()
 
-
 def draw_line(x0, y0, x1, y1):
     t.penup()
     t.goto(x0, y0)
@@ -19,10 +18,8 @@ def draw_rectangle(x0, y0, len, hgt, clr):
     draw_line(x0, y0+hgt, x0, y0)
     t.end_fill()
 
-# Make the drawing instant
 ts.tracer(0)
 
-# Draw 1 row of rectangles. 
 n_cols = 20 
 x_val  = -150
 y_val  = 0
@@ -38,13 +35,10 @@ for jj in range(n_cols):
 
 t.hideturtle()    
 
-
-
 ts.update()
 input()
 t.clear()
 
-# Create a grid of squares
 n_rows = 20
 y_val = 150
 x_val = -150
@@ -65,8 +59,6 @@ input()
 
 t.clear()
 t.hideturtle()
-
-
 
 ts.tracer(0)
 n_rows = 20; 
@@ -111,7 +103,6 @@ for kk in range(n_rows):
         color_list = [1, 1, 1, 1, 3, 3, 3, 3, 1, 1, 1, 1, 3, 3, 3, 3, 1, 1, 1, 1]
     else:
         color_list = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-
         
     for jj in range(n_cols):
 
@@ -132,9 +123,6 @@ for kk in range(n_rows):
     y_val = y_val - 15
 
 t.hideturtle()
-
-
-
 
 ts.update()    
 ts.mainloop()
