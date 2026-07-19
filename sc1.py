@@ -24,7 +24,7 @@ while shopping_complete==0:
     
    
     
-    if order <= 5:
+    if order <= 8:
         print("You selected", menu[order-1])
         quant = int(input("How many units do you wish to purchase?\n"))
 
