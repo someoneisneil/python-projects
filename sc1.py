@@ -7,7 +7,7 @@ spacer()
 print("Welcome to Neil's Bakery")
 print()
 
-menu = ["Milkshake", "Ice Cream", "Chocolate", "Eclairs", "CupCake", "dounut", "cake ", "sundae" ]
+menu = ["Milkshake", "Ice Cream", "Chocolate", "Eclairs", "CupCake", "Dounut", "Cheese Cake", "Sundae" ]
 price = [ 5.00, 3.00, 2.00, 2.00, 1.00, 2.00, 5.00, 8.00]
 
 print("ITEM", "PRICE (INR), excl. Tax", sep="\t\t")
@@ -30,7 +30,6 @@ while shopping_complete==0:
 
         if menu[order-1] in shopping_cart:
             idx = shopping_cart.index(menu[order-1])
-            
             shopping_quant[idx]+=quant
         else:
             shopping_cart.append(menu[order-1])        
@@ -43,16 +42,16 @@ while shopping_complete==0:
         print("ERROR! . ERROR! . ERROR! that was not a valid input plz try again.")
 
 print()
-print('Your Shopping Cart:')
+print("Your Shopping Cart:")
 
 grand_tot = 0.0
-print('ITEM', 'QUANT', 'UNIT PRICE', 'TOTAL', sep='\t\t')    
+print("ITEM", "QUANT", "UNIT PRICE", "TOTAL", sep="\t\t")    
 for kk in range(len(shopping_cart)):
     idx = menu.index(shopping_cart[kk])
     unit_price=price[idx]
     tot_price = round(unit_price*shopping_quant[kk], 2)
     grand_tot += tot_price
-    print(shopping_cart[kk], shopping_quant[kk], unit_price, tot_price, sep='\t\t')
+    print(shopping_cart[kk], shopping_quant[kk], unit_price, tot_price, sep="\t\t")
 
 grand_tot = round(grand_tot, 2)
 print()
