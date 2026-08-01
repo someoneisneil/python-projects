@@ -59,23 +59,22 @@ grand_tot = round(grand_tot, 2)
 print()
 print("Your total order is (USD)", grand_tot)
 
-next_50 = 50*(grand_tot//50+1)
-gap_50 = next_50 - grand_tot
+next_20 = 20*(grand_tot//20+1)
+gap_20 = next_20 - grand_tot
 
 
-print ("if u purchace for ", next_50," u get a 10% discount")
-discount_wanted = input("would u like this offer yn")
+print ("if u purchace for ", next_20," u get a 5% discount")
+discount_wanted = input("would u like this offer (y/n)\n")
 
 add_quant = []
 
-dct_rate = 10.0;
+dct_rate = 5.0;
 tax_rate = 3.0;
 
 if discount_wanted == 'y':
-    #discount = round(dct_rate/100.0*grand_tot, 2)
     print ("here are the following options")
     for i in range(len(menu)):
-        add_quant.append(int(gap_50//price[i]+1))
+        add_quant.append(int(gap_20//price[i]+1))
         
         print(str(i+1), ".add", menu[i], "\t\t", add_quant[i], "units")
 
@@ -103,6 +102,13 @@ for kk in range(len(shopping_cart)):
     grand_tot += tot_price
     print(shopping_cart[kk], shopping_quant[kk], unit_price, tot_price, sep="\t\t")
 
+discount = round(grand_tot, 2)
+
+grand_tot = discount
+
 grand_tot = round(grand_tot, 2)
+
 print()
 print("Your total order is (USD)", grand_tot)
+
+#dct_rate/100.0*
