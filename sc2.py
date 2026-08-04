@@ -102,7 +102,7 @@ for kk in range(len(shopping_cart)):
     grand_tot += tot_price
     print(shopping_cart[kk], shopping_quant[kk], unit_price, tot_price, sep="\t\t")
 
-discount = round(grand_tot, 2)
+discount = round(grand_tot//dct_rate, 2)
 
 grand_tot = discount
 
