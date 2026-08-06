@@ -1,6 +1,6 @@
 import random 
 n = random.randint(1, 100)
-print(n)
+
 print('I have selected a number between 1 and 100. Can you guess?')
 
 attempts = 0
@@ -33,7 +33,7 @@ print('Click enter when ready')
 perans = input()
 auto = input('i can also do it automaticly (Y/N) *plz lowercase:')
 print("srry auto in test center fr nw do it manualy")
-print("bt u can view test file in this repoitory *the test prjct may fail")
+print("bt u can view test file in this repoitory\n*the test prjct may fail\n*the test project is more robust")
 guess = 0
 attempts = 0
 guess_step = 10; 
