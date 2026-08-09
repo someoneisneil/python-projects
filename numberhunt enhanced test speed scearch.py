@@ -139,8 +139,48 @@ if auto.lower() == "y":
             print("I took ", attempts, "attempts to guess it.")
             done = True
 
+
+
+
+
+    print()
+    print()
+
+    print("I think I can do it faster ")
+    print("Let me try speed search ")
+
+
+    done = False
+    low = 0
+    high = 100
+    guess_step = 0
+    attempts = 0
+
+    while not done:
+        guess = round((low + high) / 2)
+        print("is it", guess)
+        attempts = attempts + 1
+
+        if guess > perans:
+            high = guess
+            print("nope it's less")
+            time.sleep(1)
+
+        elif guess < perans:
+            low = guess
+            print("nope it's greater")
+            time.sleep(1)
+
+        elif guess == perans:
+            print("Bingo, I got it.")
+            print("I took ", attempts, "attempts to guess it.")
+            done = True
+            time.sleep(1)
+
+
 else:
-  while not done:
+    print("sorry didnt get that defaulting you to manual")
+    while not done:
       answer = input(
           "Is it "+ str(guess)+ "? (y = Yes, s = smaller than that, l = larger than that) \n")
       attempts = attempts + 1
@@ -162,34 +202,41 @@ else:
           print("I took ", attempts, "attempts to guess it.")
           done = True
 
-print()
-print()
 
-print("I think I can do it faster ")
-print("Let me try speed search ")
+    done = False
+    low = 0
+    high = 100
+    guess_step = 0
+    attempts = 0
 
 
-done = False
-low = 0
-high = 100
-guess_step = 0
-attempts = 0
 
-while not done:
-    guess = round((low + high) / 2)
-    answer = input("Is it "+ str(guess)+ "? (y = Yes, s = smaller than that, l = larger than that) \n")
-    attempts = attempts + 1
+    print()
+    print()
 
-    if answer.lower() == "s":
-        high = guess
+    print("I think I can do it faster ")
+    print("Let me try speed search ")
 
-    if answer.lower() == "l":
-        low = guess
+    while not done:
+        guess = round((low + high)/2)
+        answer = input('Is it '+ str(guess) + '? (y = Yes, s = smaller than that, l = larger than that) \n')
+        attempts = attempts + 1 
 
-    if answer.lower() == "y":
-        print("Bingo, I got it.")
-        print("I took ", attempts, "attempts to guess it.")
-        done = True
+        if answer.lower() == 's':
+            high = guess
+    
+        if answer.lower() == 'l':
+            low = guess
+    
+        if answer.lower() == 'y':
+            print('Bingo, I got it.')
+            print('I took ', attempts, 'attempts to guess it.')
+            done = True
+    
+    print()
+    print()
 
-print()
-print()
+
+
+
+print("\n" *10)
